@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portofolio — Sayyidah Nafisah</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Typed.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <style>
+      :root{
+        --bg-grad-1: #f6f3fb; /* very light */
+        --accent-1: #b39cd0; /* ungu pastel */
+        --accent-2: #ffd6c9; /* peach muda */
+        --muted: #6b6b6b;
+        --card-bg: #ffffff;
+        --radius: 14px;
+      }
+      html,body{font-family: 'Poppins', sans-serif; background: linear-gradient(180deg,var(--bg-grad-1), #fff); color:#2b2b2b; -webkit-font-smoothing:antialiased;}
+      a{ text-decoration:none; }
+      /* NAVBAR */
+      
+      /* ==== Navbar Styling ==== */
+.navbar {
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar-brand:hover {
+  opacity: 0.9;
+}
+
+.navbar .nav-link {
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #5c3d8d !important;
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+      /* HERO */
+      /* HERO FRAME */
+      .hero-section {
+        padding: 80px 0;
+      }
+
+      .profile-frame {
+        display: inline-block;
+        padding: 3px;
+        background: linear-gradient(135deg, #ffd6c9, #b39cd0);
+        border-radius: 50%;
+        box-shadow: 0 10px 25px rgba(179,156,208,0.3);
+      }
+
+      .profile-photo {
+        width: 250px; /* Ubah ukuran jika perlu */
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #fff;
+      }
+
+      .jumbotron{padding-top:6.2rem; padding-bottom:4rem;}
+      .home h1{font-size:2.6rem; font-weight:700; color:#2b2b2b;}
+      .home h3{color:var(--muted); font-weight:600;}
+      .typing{color:var(--accent-1); font-weight:600; margin-top:.5rem; display:block;}
+      .cta{display:inline-block; margin-top:1rem; background: linear-gradient(90deg,var(--accent-1), var(--accent-2)); color:#fff; padding:.55rem 1rem; border-radius:999px; box-shadow:0 6px 18px rgba(179,156,208,0.18);}
+      /* ABOUT */
+      .about{padding:3rem 0;}
+      .about .about-title{color:var(--accent-1); font-weight:700;}
+      .about img{max-width:45%; border-radius:12px;}
+      /* TIMELINE EXPERIENCE */
+      .timeline{position:relative; margin:2rem 0;}
+      .timeline:before{content:""; position:absolute; left:50%; top:0; transform:translateX(-50%); width:4px; height:100%; background: linear-gradient(#e9dff6,#ffe9df); border-radius:6px;}
+      .timeline-item{position:relative; width:50%; padding:1rem 2rem;}
+      .timeline-item.left{left:0; text-align:right;}
+      .timeline-item.right{left:50%;}
+      .timeline-item .card{background:var(--card-bg); border-radius:12px; box-shadow:0 10px 30px rgba(100,80,150,0.06); padding:1rem;}
+      .timeline-item .year{font-weight:700; color:var(--accent-1);}
+      @media(max-width:991px){
+        .timeline:before{left:10px; transform:none;}
+        .timeline-item{width:100%; padding-left:3rem; text-align:left;}
+        .timeline-item.right{left:0;}
+      }
+      /* PROJECTS */
+      .project-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(92, 61, 141, 0.25);
+}
+
+.project-img {
+  width: 100%;
+  height: 160px; /* lebih kecil agar proporsional */
+  object-fit: cover;
+  background: #f8f5fb;
+}
+
+.project-card h5 {
+  color: #5c3d8d;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.88rem;
+  color: #4b4453;
+  margin-bottom: 0.75rem;
+}
+
+.text-muted {
+  color: #a678b1 !important;
+  font-size: 0.8rem;
+}
+
+.btn-outline-primary {
+  border-color: #f4a9a8;
+  color: #5c3d8d;
+  border-radius: 50px;
+  font-size: 0.85rem;
+}
+
+.btn-outline-primary:hover {
+  background: linear-gradient(90deg, #f4a9a8, #cbb0e3);
+  border: none;
+  color: #fff;
+}
+
+      /* SKILLS */
+      .skills-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1rem;}
+      .skill-card{background:linear-gradient(180deg,#fff,#fff); border-radius:12px; padding:1rem; text-align:center; box-shadow:0 6px 18px rgba(111,66,193,0.06);}
+      .skill-card i{font-size:1.6rem; color:var(--accent-1); margin-bottom:.5rem;}
+      /* ORGANISASI (cards) */
+     .org-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .org-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .img-container {
+        width: 100%;
+        height: 220px; /* tinggi card seragam */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: #f8f5fb;
+      }
+
+      .org-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* <<< agar foto tidak terpotong */
+        border-bottom: 1px solid #eee;
+      }
+
+      .card-body {
+        padding: 1.5rem;
+      }
+
+      .org-card h4 {
+        font-weight: 600;
+        color: #5c3d8d;
+      }
+
+      .org-card h6 {
+        font-weight: 500;
+        color: #a678b1;
+      }
+
+      .org-card p {
+        color: #4b4453;
+        font-size: 0.95rem;
+      }
+
+      /* CONTACT */
+      .contact-card{background:linear-gradient(90deg, rgba(179,156,208,0.06), rgba(255,214,201,0.04)); border-radius:16px; padding:1.2rem;}
+      /* FOOTER */
+      footer{padding:2rem 0; text-align:center; color:var(--muted); font-size:.9rem;}
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background: linear-gradient(90deg, #f4a9a8, #cbb0e3);">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#home" style="color: #fff; font-size: 1.4rem;">
+      <i class="bi bi-person-circle me-2"></i>Sayyidah Nafisah
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <a class="nav-link active text-white fw-semibold px-3" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold px-3" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold px-3" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold px-3" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold px-3" href="#portfolio">Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold px-3" href="#organisasi">Organization</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold px-3" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+    <!-- HERO (REVISED VERSION - FOTO DI KIRI) -->
+    <header id="home" class="hero-section d-flex align-items-center" 
+            style="background: linear-gradient(120deg, #cbb7e3 0%, #ffe0d2 100%);
+                  position: relative; overflow: hidden; min-height: 100vh;">
+
+      <!-- Pola lembut agar tidak flat -->
+      <div style="position:absolute; top:0; left:0; width:100%; height:100%;
+                  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+                  opacity:0.15;"></div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center">
+
+          <!-- FOTO PROFIL DI KIRI -->
+          <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="fade-right">
+            <!-- EDIT: ganti path foto -->
+            <div class="profile-frame mx-auto">
+              <img src="assets/img/foto-profil.jpg" alt="Foto Sayyidah Nafisah" class="profile-photo">
+            </div>
+          </div>
+
+          <!-- TEKS HERO DI KANAN -->
+          <div class="col-lg-7 text-lg-start text-center" data-aos="fade-left">
+            <h3 class="fw-semibold" style="color:#6b4b8a;">Halo, saya</h3>
+            <h1 style="font-size:2.8rem; font-weight:700; color:#2c235a;">Sayyidah Nafisah</h1>
+            <h4 style="color:#6b4b8a; font-weight:500;">
+              <span id="typed"></span>
+            </h4>
+            <p class="mt-3" style="color:#4a4458; font-size:1.1rem;">
+              Lulusan Sistem Informasi dengan keahlian di bidang pengembangan website, 
+              analisis data, dan administrasi digital.  
+              Memiliki ketertarikan pada teknologi dan efisiensi sistem informasi modern.
+            </p>
+            <a href="CV3.pdf" target="_blank" 
+              class="btn mt-3 px-4 py-2 fw-semibold"
+              style="background-color:#7f5ba3; color:#fff; border-radius:30px;">
+              Lihat CV Saya
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-md-5 text-center mb-4 mb-md-0">
+            <img src="assets/img/foto-profil.jpg" alt="Foto Sayyidah" class="img-fluid rounded-4 shadow">
+          </div>
+          <div class="col-md-7">
+            <h2 class="about-title">Tentang Saya</h2>
+            <p>
+              Saya Sayyidah Nafisah, lulusan Program Studi Sistem Informasi (IPK 3,77) dari Universitas Pembangunan Nasional “Veteran” Jawa Timur. 
+              Saya memiliki pengalaman mengembangkan website, membuat dashboard penjualan & pemasaran, serta mengolah data untuk laporan menggunakan Microsoft Excel. 
+              Selain itu, saya pernah lolos pendanaan inkubator bisnis dan memamerkan proyek penyewaan alat musik tradisional Tongklek di pameran kampus.
+            </p>
+
+            <div class="row mt-4">
+              <div class="col-sm-6">
+                <h6 class="mb-1 text-muted">Lokasi</h6>
+                <p>Gresik, Jawa Timur</p>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="mb-1 text-muted">E-mail</h6>
+                <p><a href="mailto:sayyidahnaf18@gmail.com">sayyidahnaf18@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="mt-3">
+              <a href="#portfolio" class="btn btn-outline-secondary">Lihat Proyek</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-4">
+      <div class="container" data-aos="fade-up">
+        <h3 class="fw-bold mb-4" style="color:var(--accent-1)">Pendidikan</h3>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="p-3 rounded-3" style="background:#fff; box-shadow:0 8px 24px rgba(111,66,193,0.04);">
+              <h5 class="mb-1">Universitas Pembangunan Nasional “Veteran” Jawa Timur</h5>
+              <p class="mb-1 text-muted">S1 Sistem Informasi (2021 – 2025)</p>
+              <p class="mb-0">Skripsi: <em>Prediksi Produksi Songkok Menggunakan Metode ARIMA dan Exponential Smoothing pada Tebu Mas Gresik</em></p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="p-3 rounded-3" style="background:#fff; box-shadow:0 8px 24px rgba(111,66,193,0.04);">
+              <h5 class="mb-1">SMA Negeri 1 Gresik</h5>
+              <p class="mb-1 text-muted">Jurusan IPA (2018 – 2021)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (TIMELINE) -->
+    <section id="experience" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h3 class="fw-bold mb-4" style="color:var(--accent-1)">Pengalaman</h3>
+
+        <div class="timeline">
+          <!-- item 1 -->
+          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="100">
+            <div class="card">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h5 class="mb-1">PT Wahana Wirawan</h5>
+                  <p class="mb-1 text-muted">Freelance — Data Analyst & Web Developer (2024)</p>
+                </div>
+                <div class="year">2024</div>
+              </div>
+              <p class="mb-0">Mengembangkan website dashboard penjualan dan pemasaran yang menampilkan visualisasi data interaktif untuk mendukung pengambilan keputusan manajemen.</p>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
+            <div class="card">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h5 class="mb-1">Program Inkubator Bisnis UPN “Veteran” Jawa Timur</h5>
+                  <p class="mb-1 text-muted">Web Developer (2023)</p>
+                </div>
+                <div class="year">2023</div>
+              </div>
+              <p class="mb-0">Mengembangkan website penyewaan alat musik tradisional Tongklek; proyek ini lolos pendanaan dan dipamerkan pada Pameran Inkubator Bisnis kampus.</p>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="300">
+            <div class="card">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h5 class="mb-1">Freelance Web Developer</h5>
+                  <p class="mb-1 text-muted">Fullstack (2022 – Sekarang)</p>
+                </div>
+                <div class="year">2022–Sekarang</div>
+              </div>
+              <p class="mb-0">Membangun website company profile, sistem arsip digital, dan berbagai proyek web berbasis Laravel & CodeIgniter. Bertanggung jawab pada integrasi database dan antarmuka pengguna responsif.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ORGANISASI -->
+    <section id="organisasi" class="org-section">
+      <div class="container" data-aos="fade-up">
+        <h3 class="fw-bold mb-4" style="color:var(--accent-1)">Pengalaman Organisasi</h3>
+        <div class="row g-4 justify-content-center">
+
+          <!-- Senyum Desa -->
+           
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="card org-card">
+              <!-- EDIT: ganti image path jika perlu -->
+              <img src="assets/img/SD.jpg" class="card-img-top" alt="Senyum Desa">
+              <div class="card-body">
+                <h5 class="card-title" style="color:var(--accent-1)">Senyum Desa</h5>
+                <p class="text-muted mb-1">Koor Media & Informasi (2021–2023)</p>
+                <p class="mb-0">Mengelola publikasi, dokumentasi, dan penyampaian informasi melalui media digital organisasi.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- HIMASIFO -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="card org-card">
+              <img src="assets/img/himasifo.jpg" class="card-img-top" alt="HIMASIFO">
+              <div class="card-body">
+                <h5 class="card-title" style="color:var(--accent-1)">HIMASIFO</h5>
+                <p class="text-muted mb-1">Staff Departemen Litbang (2022–2023)</p>
+                <p class="mb-0">Mendukung kegiatan penelitian, penyebaran informasi lomba dan survei akademik.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- HIPMI PT -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="card org-card ">
+              <img src="assets/img/hipmi.jpg" class="card-img-top" alt="HIPMI">
+              <div class="card-body">
+                <h5 class="card-title" style="color:var(--accent-1)">HIPMI PT UPN Veteran Jatim</h5>
+                <p class="text-muted mb-1">Divisi Organisasi & Keanggotaan (2022–2023)</p>
+                <p class="mb-0">Mengelola data keanggotaan dan membantu pelaksanaan program kerja seperti diklat.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MP MBKM -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="card org-card ">
+              <img src="assets/img/MP_MBKM.jpg" class="card-img-top" alt="MP MBKM">
+              <div class="card-body">
+                <h5 class="card-title" style="color:var(--accent-1)">MP MBKM UPN Veteran Jatim</h5>
+                <p class="text-muted mb-1">Staff Ahli (2023–Sekarang)</p>
+                <p class="mb-0">Mengelola pendataan mahasiswa MBKM dan membantu koordinasi birokrasi antar fakultas.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & SERTIFIKASI -->
+    <section id="skills" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h3 class="fw-bold mb-4" style="color:var(--accent-1)">Keahlian & Sertifikasi</h3>
+
+        <div class="row">
+          <div class="col-lg-7 mb-4">
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="fa-solid fa-file-lines"></i>
+                <h6 class="mt-2">Microsoft Office</h6>
+                <small>Word, PowerPoint, Excel (Pivot, Dashboard, Data Cleaning)</small>
+              </div>
+              <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <h6 class="mt-2">Basis Data</h6>
+                <small>MySQL, SQL Developer, XAMPP, phpMyAdmin</small>
+              </div>
+              <div class="skill-card">
+                <i class="fa-solid fa-code"></i>
+                <h6 class="mt-2">Pengembangan Web</h6>
+                <small>HTML, CSS, JavaScript, Bootstrap, PHP</small>
+              </div>
+              <div class="skill-card">
+                <i class="fa-brands fa-laravel"></i>
+                <h6 class="mt-2">Framework</h6>
+                <small>Laravel, CodeIgniter 3</small>
+              </div>
+              <div class="skill-card">
+                <i class="fa-solid fa-paintbrush"></i>
+                <h6 class="mt-2">Desain</h6>
+                <small>Figma, Canva (UI/visual untuk presentasi)</small>
+              </div>
+              <div class="skill-card">
+                <i class="fa-solid fa-flask"></i>
+                <h6 class="mt-2">Testing & API</h6>
+                <small>Postman, basic unit testing</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="p-4 contact-card">
+              <h6 class="mb-2">Pelatihan & Sertifikasi</h6>
+              <p class="mb-1"><strong>Lembaga:</strong> LSP Teknologi Digital (contoh)</p>
+              <p class="mb-1"><strong>Program:</strong> Junior Web Developer</p>
+              <p class="mb-0"><strong>Deskripsi:</strong> Pelatihan intensif pengembangan aplikasi web menggunakan PHP, framework Laravel, pengelolaan database, dan dokumentasi teknis.</p>
+
+              <!-- EDIT: Hapus atau ganti jika kamu punya sertifikat asli -->
+              <div class="mt-3">
+                <small class="text-muted">Catatan: Ganti detail pelatihan di sini dengan data sertifikat asli jika ada.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PORTFOLIO / PROJECTS -->
+    <section id="portfolio" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h3 class="fw-bold mb-4" style="color:var(--accent-1)">Proyek & Portofolio</h3>
+        <div class="row d-flex justify-content-center portfolio-container">
+
+          <!-- Project 1: Medspace -->
+          <div class="col-lg-3 col-md-5 col-sm-6 mb-4">
+            <div class="card project-card shadow-sm border-0">
+              <img src="assets/img/image.png" class="card-img-top project-img" alt="Medspace">
+              <div class="card-body">
+                <h4 class="card-title text-center">Medspace</h4>
+                <p class="card-text text-justify">
+                  Bertugas sebagai <b>Backend Developer</b> dengan tanggung jawab membuat API, 
+                  menginstal module npm, dan membantu tim QA dalam proses pengujian sistem. 
+                  Proyek ini berfokus pada pengembangan aplikasi berbasis web kesehatan.
+                </p>
+                <p class="text-muted text-center">Node.js · Express.js · MySQL</p>
+                <div class="text-center"><a href="medspace.html" class="btn btn-outline-primary btn-sm">Lihat Detail</a></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Company Profile (FJSteel) -->
+          <div class="col-lg-3 col-md-5 col-sm-6 mb-4">
+            <div class="card project-card shadow-sm border-0">
+              <img src="assets/img/fjsteel.png" class="card-img-top project-img" alt="Company Profile FJSteel">
+              <div class="card-body">
+                <h4 class="card-title text-center">Company Profile FJSteel</h4>
+                <p class="card-text text-justify">
+                  Bertanggung jawab dalam <b>UI/UX Design</b> serta mendesain layout website dan 
+                  membantu integrasi data produk dari backend perusahaan agar tampil dinamis dan menarik.
+                </p>
+                <p class="text-muted text-center">HTML · CSS · JavaScript · Bootstrap</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Tongklek Milenial -->
+          <div class="col-lg-3 col-md-5 col-sm-6 mb-4">
+            <div class="card project-card shadow-sm border-0">
+              <img src="assets/img/tongklek.png" class="card-img-top project-img" alt="Tongklek Milenial">
+              <div class="card-body">
+                <h4 class="card-title text-center">Tongklek Milenial</h4>
+                <p class="card-text text-justify">
+                  Website e-commerce hasil inkubator bisnis UPN “Veteran” Jawa Timur 
+                  yang memfasilitasi penyewaan alat musik tradisional dan tim pemainnya. 
+                  Proyek ini mengangkat budaya lokal dalam bentuk digital modern.
+                </p>
+                <p class="text-muted text-center">Laravel · Bootstrap · JavaScript</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Dashboard Penjualan -->
+          <div class="col-lg-3 col-md-5 col-sm-6 mb-4">
+            <div class="card project-card shadow-sm border-0">
+              <img src="assets/img/db.png" class="card-img-top project-img" alt="Dashboard Penjualan">
+              <div class="card-body">
+                <h4 class="card-title text-center">Dashboard Penjualan & Pemasaran</h4>
+                <p class="card-text text-justify">
+                  Website interaktif untuk memvisualisasikan data penjualan dan pemasaran di PT Wahana Wirawan. 
+                  Dashboard ini membantu perusahaan dalam analisis performa dan pengambilan keputusan berbasis data.
+                </p>
+                <p class="text-muted text-center">PHP · MySQL · Chart.js · Bootstrap</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Website Peramalan Produksi -->
+          <div class="col-lg-3 col-md-5 col-sm-6 mb-4">
+            <div class="card project-card shadow-sm border-0">
+              <img src="assets/img/songkok.png" class="card-img-top project-img" alt="Forecasting Songkok">
+              <div class="card-body">
+                <h4 class="card-title text-center">Website Peramalan Produksi Songkok</h4>
+                <p class="card-text text-justify">
+                  Website berbasis Python untuk memprediksi jumlah produksi songkok di Tebu Mas Gresik 
+                  menggunakan metode ARIMA dan Holt-Winters. 
+                  Didesain untuk membantu manajemen perencanaan bahan baku dan jadwal produksi.
+                </p>
+                <p class="text-muted text-center">Python · Flask · HTML · CSS · JavaScript</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+  </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5">
+      <div class="container" data-aos="fade-up">
+        <h3 class="fw-bold mb-4" style="color:var(--accent-1)">Kontak</h3>
+        <div class="row">
+          <div class="col-lg-5 mb-4">
+            <div class="contact-card">
+              <h5 class="mb-2">Hubungi Saya</h5>
+              <p class="mb-1"><strong>Lokasi:</strong> Gresik, Jawa Timur</p>
+              <p class="mb-1"><strong>Telepon:</strong> <a href="tel:08315886360">0831-5886-360</a></p>
+              <p class="mb-1"><strong>Email:</strong> <a href="mailto:sayyidahnaf18@gmail.com">sayyidahnaf18@gmail.com</a></p>
+              <div class="mt-3">
+                <a href="https://www.linkedin.com" target="_blank" class="me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#" class="me-2"><i class="fab fa-github fa-lg"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <!-- Simple contact form (mailto fallback) -->
+            <form action="mailto:sayyidahnaf18@gmail.com" method="post" enctype="text/plain">
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" name="Nama" placeholder="Nama" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="Email" placeholder="Email" required>
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control" name="Subject" placeholder="Subjek" required>
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" name="Pesan" rows="6" placeholder="Pesan" required></textarea>
+                </div>
+                <div class="col-12 text-end">
+                  <button class="btn" type="submit" style="background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#fff;">Kirim Pesan</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4">
+      <div class="container">
+        <small>© 2025 Sayyidah Nafisah — Semua hak cipta dilindungi.</small>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // AOS init
+      AOS.init({ duration: 800, once: true });
+
+      // Typed.js (typing effect on hero)
+      document.addEventListener("DOMContentLoaded", function(){
+        var options = {
+          strings: ["Web Developer", "Data Analyst", "Administrator"],
+          typeSpeed: 60,
+          backSpeed: 30,
+          backDelay: 1800,
+          loop: true
+        };
+        var typed = new Typed("#typed", options);
+      });
+
+      // Smooth scroll for nav links
+      document.querySelectorAll('.navbar a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    </script>
+  </body>
+</html>
