@@ -218,6 +218,30 @@
       .contact-card{background:linear-gradient(90deg, rgba(179,156,208,0.06), rgba(255,214,201,0.04)); border-radius:16px; padding:1.2rem;}
       /* FOOTER */
       footer{padding:2rem 0; text-align:center; color:var(--muted); font-size:.9rem;}
+
+      .transparent-table th {
+  color: #5c3d8d;
+  font-weight: 600;
+  padding: 6px 10px;
+  vertical-align: top;
+  width: 35%;
+}
+
+.transparent-table td {
+  color: #444;
+  padding: 6px 10px;
+}
+
+.transparent-table {
+  background-color: rgba(255, 255, 255, 0.6); /* transparan lembut */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+
     </style>
   </head>
 
@@ -520,21 +544,52 @@
           </div>
 
           <div class="col-lg-5">
-            <div class="p-4 contact-card">
-              <h6 class="mb-2">Pelatihan & Sertifikasi</h6>
-              <p class="mb-1"><strong>Lembaga:</strong> LSP Teknologi Digital (contoh)</p>
-              <p class="mb-1"><strong>Program:</strong> Junior Web Developer</p>
-              <p class="mb-0"><strong>Deskripsi:</strong> Pelatihan intensif pengembangan aplikasi web menggunakan PHP, framework Laravel, pengelolaan database, dan dokumentasi teknis.</p>
+            <div class="p-4 contact-card text-center">
+              <h6 class="mb-3 fw-bold" style="color: #5c3d8d;">
+                <i class="fas fa-certificate me-2" style="color: #f4a9a8;"></i> Pelatihan & Sertifikasi
+              </h6>
 
-              <!-- EDIT: Hapus atau ganti jika kamu punya sertifikat asli -->
-              <div class="mt-3">
-                <small class="text-muted">Catatan: Ganti detail pelatihan di sini dengan data sertifikat asli jika ada.</small>
+              <!-- Tabel Informasi -->
+              <div class="table-responsive">
+                <table class="table table-borderless text-start align-middle transparent-table">
+                  <tbody>
+                    <tr>
+                      <th width="35%">Lembaga</th>
+                      <td>Lembaga Sertifikasi Profesi UPN Veteran Jawa Timur</td>
+                    </tr>
+                    <tr>
+                      <th>Program Pelatihan</th>
+                      <td>Junior Web Developer</td>
+                    </tr>
+                    <tr>
+                      <th>Kejuruan</th>
+                      <td>Pengembangan Perangkat Lunak</td>
+                    </tr>
+                    <tr>
+                      <th>Sub Kejuruan</th>
+                      <td>Pemrograman Web</td>
+                    </tr>
+                    <tr>
+                      <th>Deskripsi</th>
+                      <td>Sertifikasi kompetensi pengembangan aplikasi berbasis web yang mencakup pembuatan antarmuka, pengelolaan database, serta implementasi logika pemrograman menggunakan PHP dan framework modern.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            </div>
-          </div>
-        </div>
 
-      </div>
+              <!-- Tombol Lihat Sertifikat -->
+              <div class="mt-3">
+                <a href="LSP.pdf" target="_blank" class="btn btn-outline-primary rounded-pill px-4">
+                  <i class="fas fa-file-pdf me-2"></i> Lihat Sertifikat
+                </a>
+              </div>
+
+              <small class="text-muted d-block mt-2">
+                Sertifikat resmi diterbitkan oleh LSP UPN Veteran Jawa Timur sebagai bukti kompetensi Junior Web Developer.
+              </small>
+            </div>
+
+          </div>
     </section>
 
     <!-- PORTFOLIO / PROJECTS -->
